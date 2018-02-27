@@ -4,10 +4,12 @@
  */
 
  var ROUTES = require('./ROUTES').ROUTES();
+ var Service = require('../services/service');
 
 class Route {
     constructor(app) {
         this.initializeEndpoints(app);
+        this.service = new Service();
     }
 
     /**
@@ -18,8 +20,12 @@ class Route {
     initializeEndpoints(app){
         //One endpoint
         app.get(ROUTES.routes, (req, res) => {
-            console.log('I am in a route');
-            res.send('route');
+            console.log(req);
+            this.service.firstService(req.query.name).then((data) => {
+                return res.send(data);
+            }, (err) => {
+                return res.status(err.code).send(err);
+            })
         });
         
         //By group
