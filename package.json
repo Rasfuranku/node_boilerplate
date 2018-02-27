@@ -1,0 +1,22 @@
+{
+  "name": "node_boilerplate",
+  "version": "1.0.0",
+  "description": "Basic node architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rasfuranku/soccer_club.git"
+  },
+  "author": "Frank Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasfuranku/soccer_club/issues"
+  },
+  "homepage": "https://github.com/Rasfuranku/soccer_club#readme",
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
